@@ -1,0 +1,48 @@
+﻿@model Global
+
+<h3>@Model.Name</h3>
+<table class="table">
+    <tr>
+        <th>UID</th>
+        <th>Name</th>
+        <th>Level</th>
+        <th>SelectedLegend</th>
+        <th>Skin</th>
+        <th>SkinRarity</th>
+    </tr>
+
+        <tr>
+            <td>@Model.UID</td>
+            <td>@Model.Name</td>
+            <td>@Model.Level</td>
+            <td>@Model.SelectedLegend</td>
+            <td>@Model.Skin</td>
+            <td>@Model.SkinRarity</td>
+        </tr>
+
+
+</table>
+
+<div style="display: block">
+    @using (Html.BeginForm("UpdateGlobal", "Global", "Put"))
+    {
+        @Html.HiddenFor(x => x.Name)
+        @Html.HiddenFor(x => x.Platform)
+        <button class="btn btn-default" type="submit">Refresh Stats</button>
+    }
+</div>
+
+
+    @*<div>
+        <button>
+            <a class="col-lg-6" asp-area="" asp-controller="Global" asp-action="DeleteGlobal" asp-route="@Model.UID">Delete</a>
+        </button>
+    </div>*@
+
+    <div style="display: block">
+    @using (Html.BeginForm("DeleteGlobal", "Global", "Post"))
+    {
+        <input type="hidden" asp-for="UID" value="@Model.UID" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this player from list" />
+    }
+    </div>

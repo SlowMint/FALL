@@ -1,0 +1,16 @@
+﻿@model Global
+
+<h2>Add a New Player</h2>
+
+@using (Html.BeginForm("InsertGlobal", "Global", "Post"))
+{
+    <input asp-for="UID" type="hidden" value="" />
+
+    <label asp-for="Name" class="control-label">Name</label>
+    <input type="text" name="Name" class="form-control" value="" />
+
+    <label asp-for="Platform" class="control-label">Platform (X1, PS4, PC)</label>
+    <input type="text" name="Platform" class="form-control" value=""/>
+
+    <input type="submit" value="Add Player" class="btn btn-primary" />
+}

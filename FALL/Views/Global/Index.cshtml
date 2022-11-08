@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Global>
+
+<h2>Players</h2>
+
+<div style="display: block">
+     <a href="/Global/InsertGlobal/">Add Player</a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>UID</th>
+        <th>Name</th>
+        <th>Level</th>
+        <th>SelectedLegend</th>
+        <th>Skin</th>
+        <th>SkinRarity</th>
+    </tr>
+
+    @foreach (var player in @Model)
+    {
+        <tr>
+            <td><a href=/Global/ViewGlobal/@player.UID>@player.UID</a></td>
+            <td>@player.Name</td>
+            <td>@player.Level</td>
+            <td>@player.SelectedLegend</td>
+            <td>@player.Skin</td>
+            <td>@player.SkinRarity</td>
+        </tr>
+    }
+
+</table>

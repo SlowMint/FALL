@@ -1,31 +1,45 @@
 using FALL;
+using FALL.Models;
+using MySql.Data.MySqlClient;
+using System.Data;
 
-//var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(args);
 
-//// Add services to the container.
-//builder.Services.AddControllersWithViews();
+// Add services to the container.
+builder.Services.AddControllersWithViews();
 
-//var app = builder.Build();
+builder.Services.AddScoped<IDbConnection>((s) =>
+{
+    IDbConnection conn = new MySqlConnection(builder.Configuration.GetConnectionString("fall"));
+    conn.Open();
+    return conn;
+});
 
-//// Configure the HTTP request pipeline.
-//if (!app.Environment.IsDevelopment())
-//{
-//    app.UseExceptionHandler("/Home/Error");
-//    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https:/aka.ms/aspnetcore-hsts.
-//    app.UseHsts();
-//}
 
-//app.UseHttpsRedirection();
-//app.UseStaticFiles();
 
-//app.UseRouting();
+builder.Services.AddTransient<IGlobalRepository, GlobalRepository>();
 
-//app.UseAuthorization();
+var app = builder.Build();
 
-//app.MapControllerRoute(
-//    name: "default",
-//    pattern: "{controller=Home}/{action=Index}/{id?}");
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https:/aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
 
-//app.Run();
+app.UseHttpsRedirection();
+app.UseStaticFiles();
 
-ApexStats.DisplayStats();
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Run();
+
+//ApexStats.DisplayStats();
