@@ -1,6 +1,10 @@
 ﻿@model Global
 
 <h3>@Model.Name</h3>
+
+<body>
+
+
 <table class="table">
     <tr>
         <th>UID</th>
@@ -28,21 +32,400 @@
     {
         @Html.HiddenFor(x => x.Name)
         @Html.HiddenFor(x => x.Platform)
-        <button class="btn btn-default" type="submit">Refresh Stats</button>
+        <button class="btn btn-default" button style="color: azure;" type="submit">Refresh Stats</button>
     }
 </div>
-
-
-    @*<div>
-        <button>
-            <a class="col-lg-6" asp-area="" asp-controller="Global" asp-action="DeleteGlobal" asp-route="@Model.UID">Delete</a>
-        </button>
-    </div>*@
 
     <div style="display: block">
     @using (Html.BeginForm("DeleteGlobal", "Global", "Post"))
     {
         <input type="hidden" asp-for="UID" value="@Model.UID" />
-        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this player from list" />
+        <button class="btn btn-default" button style="color: azure;" input type="submit" onclick="return confirm('Are you sure?')" value="Delete this player from list"> Delete Player </button>
     }
     </div>
+   
+
+        @if (Model.SelectedLegend == "Ash")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/ash.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Revenant")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/revenant.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Crypto")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/crypto.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Horizon")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/horizon.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Gibraltar")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/gibraltar.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Wattson")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/wattson.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Fuse")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/fuse.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Bangalore")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/bangalore.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Wraith")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/wraith.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Octane")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/octane.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Bloodhound")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/bloodhound.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Caustic")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/caustic.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Lifeline")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/lifeline.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Pathfinder")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/pathfinder.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Loba")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/loba.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Mirage")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/mirage.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Rampart")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/rampart.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Valkyrie")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/valkyrie.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Seer")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/seer.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Mad Maggie")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/mad maggie.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Newcastle")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/newcastle.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+          @if (Model.SelectedLegend == "Vantage")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https:\/\/api.mozambiquehe.re\/assets\/banners\/vantage.jpg");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+
+            @if (Model.SelectedLegend == "Catalyst")
+        {
+            <div>
+            
+            <style>
+                body{
+                    background-image: url("https://imgix.bustle.com/uploads/image/2022/11/2/71c912dc-9c45-42a0-9500-1492f7b7d6fe-apex-legends-catalyst.jpg?w=2000&h=1090&fit=crop&crop=focalpoint&auto=format%2Ccompress&fp-x=0.632&fp-y=0.3104");
+                    no-repeat center center fixed; 
+                    background-size: cover;
+                    background-size:100% 100vh;
+                }
+            </style>
+
+            </div>
+        }
+</body>

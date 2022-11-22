@@ -2,7 +2,78 @@
     ViewData["Title"] = "Home Page";
 }
 
+
+<body> 
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Friends of Apex Legends Leaderboard</h1>
 </div>
+
+<div class="container">
+    <div class="typed-out">Here you can create a cross platform friendslist to see other players current levels and most recently played legends!</div>
+</div>
+
+
+<div>
+
+<h3 class="blink">Click anyhwere to continue.</h3>
+
+</div>
+
+<video autoplay loop muted plays-inline class="back-video"> 
+    <source src="images/apex-video-background-download-worlds-edge-5.mp4" type="video/mp4">
+</video>
+
+</body>
+
+<style>
+    .typed-out{
+        overflow: hidden;
+        border-right: .1em solid azure;
+        white-space: nowrap;
+        font-size: 1rem;
+        animation: 
+        typing 10s steps(120, end) forwards,
+        blinking 1.2s infinite;
+        margin: 0;
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+    }
+
+    .container{
+        display: inline-block;
+    }
+
+    @@keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+  .blink {
+       animation: blink-animation 1s steps(5, start) infinite;
+       -webkit-animation: blink-animation 1s steps(5, start) infinite;
+       margin: auto;
+       width: 50%;
+       padding: 10px;
+       text-align:center;
+      }
+
+      @@keyframes blinking {
+          from {border-color: transparent}
+          to {border-color: azure}
+      }
+
+     @@keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+
+     @@-webkit-keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+     }
+
+  </style>

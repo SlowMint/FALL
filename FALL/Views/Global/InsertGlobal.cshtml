@@ -2,10 +2,12 @@
 
 <h2>Add a New Player</h2>
 
+<body>
+
 @using (Html.BeginForm("InsertGlobal", "Global", "Post"))
 {
-    <input asp-for="UID" type="hidden" value="" />
 
+    <input asp-for="UID" type="hidden" value="" />
     <label asp-for="Name" class="control-label">Name</label>
     <input type="text" name="Name" class="form-control" value="" />
 
@@ -14,3 +16,30 @@
 
     <input type="submit" value="Add Player" class="btn btn-primary" />
 }
+
+<style>
+
+    body{
+     background-image: url("https://i.redd.it/5p16231zzx651.png");
+     no-repeat center center fixed; 
+     background-size: cover;
+     background-size:100% 100vh;
+    }
+
+    
+    input{
+     background-image: url("https://t4.ftcdn.net/jpg/01/30/41/43/360_F_130414382_O4tDxNpAVIBnCwOzI6YT3fiPSplEHbLW.jpg");
+     no-repeat center center fixed; 
+     background-size: cover;
+     background-size:100% 100vh;
+    }
+
+</style>
+
+</body>
+
+
+
+       
+
+
