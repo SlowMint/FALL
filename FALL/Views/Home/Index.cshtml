@@ -9,14 +9,22 @@
     <h1 class="display-4">Friends of Apex Legends Leaderboard</h1>
 </div>
 
-<div class="container">
-    <div class="typed-out">Here you can create a cross platform friendslist to see other players current levels and most recently played legends!</div>
+<br/>
+<br/>
+<br/>
+
+<div class="type container">
+    <div class="typed-out">Here you can create a cross platform friends list to see other players current levels and most recently played legends!</div>
 </div>
 
+<br/>
+<br/>
+<br/>
+<br/>
 
 <div>
 
-<h3 class="blink">Click anyhwere to continue.</h3>
+<a style="text-decoration:none" asp-controller="Global" asp-action="Index"> <h3 class="blink">Click here to continue.</h3> </a>
 
 </div>
 
@@ -29,20 +37,22 @@
 <style>
     .typed-out{
         overflow: hidden;
-        border-right: .1em solid azure;
         white-space: nowrap;
         font-size: 1rem;
         animation: 
-        typing 10s steps(120, end) forwards,
+        typing 7.5s steps(120, end) forwards,
         blinking 1.2s infinite;
         margin: 0;
         margin: auto;
         width: 50%;
         padding: 10px;
+        text-align: center;
     }
 
-    .container{
+    .type container{
         display: inline-block;
+        padding: 25px 0;
+        text-align: center;
     }
 
     @@keyframes typing {
